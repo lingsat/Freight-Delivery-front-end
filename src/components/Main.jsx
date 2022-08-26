@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import Aside from "./Aside";
+import Table from "./Table";
 
 const Main = () => {
+  const [currentRole, setCurrentRole] = useState("");
+
   return (
     <div className="main">
-      Logged in
+      <Aside
+        setCurrentRole={setCurrentRole}
+        currentRole={currentRole}
+      />
+      <Table currentRole={currentRole} />
     </div>
   );
 };
