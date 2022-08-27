@@ -78,7 +78,6 @@ const DriverContent = () => {
   };
 
   useEffect(() => {
-    console.log("effect");
     fetchTrucks();
   }, [showAddTruckForm, fetchTrucks]);
 

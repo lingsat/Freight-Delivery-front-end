@@ -10,18 +10,18 @@ const Truck = ({ truckData, onDeleteTruckHandler, onAssignTruckHandler }) => {
       <div className="truck__status">{truckData.status}</div>
       <div className="truck__assigned">
         {truckData.isAssigned}
-        <img
+        {truckData.isAssigned === 'No' && <img
           className="truck__del"
           src="./images/trash-solid.svg"
           alt="Delete"
           onClick={() => onDeleteTruckHandler(truckData.id)}
-        />
-        <button
+        />}
+        {truckData.status === 'IS' && <button
           className="truck__btn"
           onClick={() => onAssignTruckHandler(truckData.id)}
         >
           {truckData.isAssigned === 'No' ? 'Assign' : 'DisAssign'}
-        </button>
+        </button>}
       </div>
     </div>
   );

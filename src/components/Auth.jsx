@@ -4,8 +4,8 @@ import LoginForm from "./forms/LoginForm";
 import ForgotPassForm from "./forms/ForgotPassForm";
 
 const Auth = () => {
-  const [showRegister, setShowRegister] = useState(true);
-  const [showLogin, setShowLogin] = useState(false);
+  const [showRegister, setShowRegister] = useState(false);
+  const [showLogin, setShowLogin] = useState(true);
   const [showForgotPass, setShowForgotPass] = useState(false);
 
   const showRegistrationForm = () => {

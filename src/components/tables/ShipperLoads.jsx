@@ -70,23 +70,23 @@ const ShipperLoads = () => {
     }
   };
 
-  // const assignTruckHandler = async (id) => {
-  //   const res = await fetch(
-  //     `http://localhost:8080/api/trucks/${id}/assign`,
-  //     {
-  //       method: "POST",
-  //       headers: {
-  //         Authorization: `Bearer ${token}`,
-  //       },
-  //     }
-  //   );
-  //   const data = await res.json();
-  //   if (res.ok && res.status === 200) {
-  //     fetchLoads();
-  //   } else {
-  //     alert(data.message);
-  //   }
-  // };
+  const postLoadHandler = async (id) => {
+    const res = await fetch(
+      `http://localhost:8080/api/loads/${id}/post`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    const data = await res.json();
+    if (res.ok && res.status === 200) {
+      fetchLoads();
+    } else {
+      alert(data.message);
+    }
+  };
 
   useEffect(() => {
     console.log("effect loads");
@@ -116,7 +116,7 @@ const ShipperLoads = () => {
             key={load.id}
             loadData={load}
             onDeleteLoadHandler={deleteLoadHandler}
-            // onAssignLoadHandler={assignTruckHandler}
+            onPostLoadHandler={postLoadHandler}
           />
         ))}
       </div>
