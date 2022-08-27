@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Aside from "./Aside";
-import Table from "./Table";
+import DriverContent from "./DriverContent";
+import ShipperLoads from "./tables/ShipperLoads";
 
 const Main = () => {
   const [currentRole, setCurrentRole] = useState("");
@@ -11,7 +12,11 @@ const Main = () => {
         setCurrentRole={setCurrentRole}
         currentRole={currentRole}
       />
-      <Table currentRole={currentRole} />
+      {/* <Table currentRole={currentRole} /> */}
+      <div className="table">
+        {currentRole === 'DRIVER' && <DriverContent />}
+        {currentRole === 'SHIPPER' && <ShipperLoads />}
+      </div>
     </div>
   );
 };

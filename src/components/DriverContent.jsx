@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TrucksContent from "./tables/TrucksContent";
+import TrucksContent from './tables/TrucksContent';
 import DriverActiveLoad from "./tables/DriverActiveLoad";
 
 const DriverContent = () => {

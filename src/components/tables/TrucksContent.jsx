@@ -3,7 +3,7 @@ import AddTruckForm from "../forms/AddTruckForm";
 import Truck from "../UI/Truck";
 import UserContext from "../context/UserContext";
 
-const DriverContent = () => {
+const TrucksContent = () => {
   const { token } = useContext(UserContext);
   const [trucks, setTrucks] = useState([]);
   const [showAddTruckForm, setShowAddTruckForm] = useState(false);
@@ -35,21 +35,18 @@ const DriverContent = () => {
       } else {
         setTrucks([]);
       }
-    };
+    }
   }, [token]);
 
   const deleteTruckHandler = async (id) => {
     // eslint-disable-next-line no-restricted-globals
-    if (confirm('Do you really want to delete truck?')) {
-      const res = await fetch(
-        `http://localhost:8080/api/trucks/${id}`,
-        {
-          method: "DELETE",
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+    if (confirm("Do you really want to delete truck?")) {
+      const res = await fetch(`http://localhost:8080/api/trucks/${id}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       const data = await res.json();
       if (res.ok && res.status === 200) {
         fetchTrucks();
@@ -60,15 +57,12 @@ const DriverContent = () => {
   };
 
   const assignTruckHandler = async (id) => {
-    const res = await fetch(
-      `http://localhost:8080/api/trucks/${id}/assign`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
+    const res = await fetch(`http://localhost:8080/api/trucks/${id}/assign`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
     const data = await res.json();
     if (res.ok && res.status === 200) {
       fetchTrucks();
@@ -110,4 +104,4 @@ const DriverContent = () => {
   );
 };
 
-export default DriverContent;
+export default TrucksContent;

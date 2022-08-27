@@ -1,16 +1,6 @@
-import React, { useContext } from "react";
-import UserContext from "../context/UserContext";
-
-const loadStateArr = [
-  "En route to Pick Up",
-  "Arrived to Pick Up",
-  "En route to delivery",
-  "Arrived to delivery",
-];
+import React from "react";
 
 const ActiveLoad = ({ loadData, loadLogs, iterateLoadHandler }) => {
-  const { token } = useContext(UserContext);
-
   const getButtonName = (state) => {
     if (state === "En route to Pick Up") {
       return "Arrived to Pick Up";
