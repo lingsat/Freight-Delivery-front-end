@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useContext } from "react";
 import UserContext from "../context/UserContext";
 
-const UserMenu = ({ onToggleMenu, onToggleChangePass }) => {
+const UserMenu = ({ onToggleMenu, onToggleChangePass, onToggleAddPhoto }) => {
   const menuRef = useRef();
   const { setIsLoggedIn, token, setToken, setUserData, setModalActive } = useContext(UserContext);
 
@@ -27,10 +27,11 @@ const UserMenu = ({ onToggleMenu, onToggleChangePass }) => {
         .reverse()
         .join("-");
       setUserData({
+        id: data.user._id,
         email: data.user.email,
         role: data.user.role,
-        id: data.user._id,
         createdDate: createdDate,
+        photoUrl: data.user.photo,
       });
       setModalActive(true);
     } else {
@@ -53,6 +54,12 @@ const UserMenu = ({ onToggleMenu, onToggleChangePass }) => {
     event.preventDefault();
     onToggleMenu();
     fetchUserInfo();
+  };
+
+  const addUserPhoto = (event) => {
+    event.preventDefault();
+    onToggleMenu();
+    onToggleAddPhoto();
   };
 
   const changeUserPass = (event) => {
@@ -88,6 +95,11 @@ const UserMenu = ({ onToggleMenu, onToggleChangePass }) => {
       <li className="usermenu__item">
         <a className="usermenu__link" href="#1" onClick={getUserInfo}>
           User Profile Info
+        </a>
+      </li>
+      <li className="usermenu__item">
+        <a className="usermenu__link" href="#1" onClick={addUserPhoto}>
+          Add User Photo
         </a>
       </li>
       <li className="usermenu__item">

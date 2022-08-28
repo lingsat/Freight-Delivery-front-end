@@ -8,13 +8,15 @@ import UserContext from "./components/context/UserContext";
 const localLoginState = JSON.parse(localStorage.getItem("isLoggedIn"));
 const localToken = JSON.parse(localStorage.getItem("token"));
 
-const App = () => {
+const App = () => {  
   const [modalActive, setModalActive] = useState(false);
+  const [triggerPhoto, setTriggerPhoto] = useState(false);
   const [userData, setUserData] = useState({
     email: "",
     id: "",
     role: '',
     createdDate: "",
+    photoUrl: "",
   });
   const [isLoggedIn, setIsLoggedIn] = useState(localLoginState || false);
   const [token, setToken] = useState(localToken || "");
@@ -35,6 +37,8 @@ const App = () => {
           setModalActive,
           userData,
           setUserData,
+          triggerPhoto, 
+          setTriggerPhoto
         }}
       >
         <Header isLoggedIn={isLoggedIn} />

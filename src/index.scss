@@ -1,15 +1,26 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p, ol, ul, li {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li {
   padding: 0;
   margin: 0;
 }
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {
@@ -31,7 +42,7 @@ body {
 .header {
   padding: 20px 0;
   // margin-bottom: 20px;
-  background-color: #378BA4;
+  background-color: #378ba4;
   color: #fff;
   box-shadow: 0 2px 8px 2px #747674;
   &__inner {
@@ -54,15 +65,15 @@ body {
   }
   &__btn {
     padding: 0;
-    margin: 0;  
+    margin: 0;
     width: 45px;
     height: 45px;
-    background-color: #378BA4;
-    border: 2px solid #378BA4;
+    background-color: #378ba4;
+    border: 2px solid #378ba4;
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.1s linear;
-    &:hover {    
+    &:hover {
       background-color: #036280;
       border-color: #036280;
     }
@@ -84,13 +95,13 @@ body {
 .form {
   width: 300px;
   padding: 15px;
-  border: 1px solid #378BA4;
+  border: 1px solid #378ba4;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  background-color: #F8F9FB;
+  background-color: #f8f9fb;
   color: #000;
-  box-shadow: 0 0 10px 5px #D2D2D4;
+  box-shadow: 0 0 10px 5px #d2d2d4;
   position: relative;
   animation: showForm 0.5s linear;
   &--change {
@@ -111,28 +122,28 @@ body {
   }
   &__input {
     margin-bottom: 15px;
-    padding: 5px 0; 
-    font-family: 'Montserrat', sans-serif;
+    padding: 5px 0;
+    font-family: "Montserrat", sans-serif;
     font-size: 1rem;
-    background-color: #F8F9FB;
+    background-color: #f8f9fb;
     border: none;
-    border-bottom: 2px solid #D2D2D4;
+    border-bottom: 2px solid #d2d2d4;
     outline: none;
   }
   &__textarea {
     margin-bottom: 15px;
-    padding: 5px 0; 
-    font-family: 'Montserrat', sans-serif;
+    padding: 5px 0;
+    font-family: "Montserrat", sans-serif;
     font-size: 1rem;
-    background-color: #F8F9FB;
-    border: 2px solid #D2D2D4;
+    background-color: #f8f9fb;
+    border: 2px solid #d2d2d4;
     resize: none;
     outline: none;
   }
   &__select {
     padding: 3px 0;
     width: 90px;
-    border: 1px solid #012E4A;
+    border: 1px solid #012e4a;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
@@ -143,19 +154,19 @@ body {
   &__btn {
     margin: 15px 0;
     padding: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 1px;
-    background-color: #378BA4;
+    background-color: #378ba4;
     color: #fff;
-    border: 2px solid #378BA4;
+    border: 2px solid #378ba4;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.1s linear;
     &:hover {
-      color: #378BA4;
-      background-color: #F8F9FB;
+      color: #378ba4;
+      background-color: #f8f9fb;
     }
   }
   &__text {
@@ -163,13 +174,13 @@ body {
     line-height: 1;
     text-align: center;
     span {
-      color: #378BA4;
+      color: #378ba4;
       font-weight: 600;
       cursor: pointer;
       &:hover {
         text-decoration: underline;
       }
-    }    
+    }
   }
 }
 
@@ -188,7 +199,7 @@ fieldset {
   margin: 0;
   padding: 0;
   border: none;
-} 
+}
 
 // ***** User Menu *****
 .usermenu {
@@ -196,22 +207,22 @@ fieldset {
   position: absolute;
   top: 55px;
   right: 0;
-  z-index: 1;
-  background-color: #F8F9FB;
+  z-index: 10;
+  background-color: #f8f9fb;
   border-radius: 10px;
   border: 2px solid #036280;
   overflow: hidden;
   &__item {
     padding: 10px;
     &:hover {
-      background-color: #E8EDE7;
+      background-color: #e8ede7;
     }
   }
   &__link {
     display: block;
     width: 100%;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     font-weight: 400;
     color: #000;
@@ -226,6 +237,7 @@ fieldset {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 20;
   background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
@@ -270,10 +282,10 @@ fieldset {
   font-size: 1rem;
   font-weight: 700;
   background-color: transparent;
-  color: #FD292F;
+  color: #fd292f;
   transition: all 0.1s linear;
   &:hover {
-    background-color: #FD292F;
+    background-color: #fd292f;
     color: #f4f7fc;
   }
 }
@@ -288,12 +300,16 @@ fieldset {
   padding: 20px;
   width: 300px;
   min-height: calc(100vh - 85px);
-  border-right: 2px solid #378BA4;
-  border-left: 2px solid #378BA4;
+  border-right: 2px solid #378ba4;
+  border-left: 2px solid #378ba4;
   &__info {
     padding-bottom: 10px;
     margin-bottom: 15px;
-    border-bottom: 2px solid #D2D2D4;
+    border-bottom: 2px solid #d2d2d4;
+  }
+  &__img {
+    width: 120px;
+    border-radius: 5px;
   }
   &__title {
     margin-bottom: 10px;
@@ -311,16 +327,16 @@ fieldset {
 .table {
   padding: 20px;
   width: calc(100% - 300px);
-  border-right: 2px solid #378BA4; 
+  border-right: 2px solid #378ba4;
   &__inner {
     position: relative;
-  } 
+  }
 }
 
 .table__btn {
   padding: 10px 30px;
   margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   background-color: #338309;
@@ -331,7 +347,7 @@ fieldset {
   transition: all 0.1s linear;
   &:hover {
     color: #338309;
-    background-color: #F8F9FB;
+    background-color: #f8f9fb;
   }
 }
 
@@ -339,18 +355,18 @@ fieldset {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid #D2D2D4;
+  border-bottom: 2px solid #d2d2d4;
   &--header {
-    background-color: #378BA4;
+    background-color: #378ba4;
     color: #fff;
     font-weight: 600;
-    border-top: 2px solid #D2D2D4;
+    border-top: 2px solid #d2d2d4;
   }
   &--row {
     position: relative;
   }
   &--assigned {
-    background-color: #AEC670;
+    background-color: #aec670;
   }
   &__info {
     padding: 20px;
@@ -360,34 +376,34 @@ fieldset {
   }
   &__menu {
     padding: 10px;
-    border-top: 2px solid #D2D2D4;
+    border-top: 2px solid #d2d2d4;
   }
   &__type {
     padding: 10px;
     text-align: center;
     width: 25%;
-    border-left: 2px solid #D2D2D4;
-    border-right: 2px solid #D2D2D4;
+    border-left: 2px solid #d2d2d4;
+    border-right: 2px solid #d2d2d4;
   }
   &__payload {
     padding: 10px;
     text-align: center;
     width: 25%;
-    border-right: 2px solid #D2D2D4;
+    border-right: 2px solid #d2d2d4;
   }
   &__status {
     padding: 10px;
     text-align: center;
     width: 25%;
-    border-right: 2px solid #D2D2D4;
+    border-right: 2px solid #d2d2d4;
   }
   &__assigned {
     position: relative;
     padding: 10px;
-    text-align: center;    
+    text-align: center;
     width: 25%;
     min-width: 280px;
-    border-right: 2px solid #D2D2D4;
+    border-right: 2px solid #d2d2d4;
   }
 }
 
@@ -412,7 +428,7 @@ fieldset {
   z-index: 1;
   transform: translateY(-50%);
   padding: 3px 5px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   background-color: #338309;
@@ -423,13 +439,12 @@ fieldset {
   transition: all 0.1s linear;
   &:hover {
     color: #338309;
-    background-color: #F8F9FB;
+    background-color: #f8f9fb;
   }
 }
 
 .truck__buttons {
   display: flex;
-  // gap: 1px;
 }
 
 .nav__btn {
@@ -437,7 +452,7 @@ fieldset {
   width: 50%;
   padding: 10px;
   font-size: 1.2rem;
-  background-color: #378BA4;
+  background-color: #378ba4;
   color: #fff;
   border: none;
   border-radius: 0;
@@ -453,87 +468,102 @@ fieldset {
   }
 }
 
-// ***** Loads *****
-.loads__header, .loads__row {
+// ***** Card *****
+.cards__block {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  // align-items: center;
-  text-align: center;
+  align-items: baseline;
+  gap: 20px;
 }
-.loads__header {
-  .loads__char {
-    padding: 10px 0;
-    border-top: 2px solid #D2D2D4;
-    font-weight: 600;
-    background-color: #378BA4;
-    color: #fff;
-  }
-}
-
-.loads__row {
-  cursor: pointer;
-}
-
-.loads__row--assigned {
-  background-color: #AEC670;
-}
-
-.loads__row--shipped {
-  background-color: #e3e3e6;
-  opacity: 0.9;
-}
-
-.loads__char {
-  font-weight: 600;
-  background-color: #378BA4;
-  color: #fff;
-}
-
-.loads__dir {
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loads__things {
-  width: 20%;
-  border-left: 2px solid #D2D2D4;
-  border-right: 2px solid #D2D2D4;
-  border-bottom: 2px solid #D2D2D4;
-}
-
-.loads__address {  
-  width: 30%;
-  border-right: 2px solid #D2D2D4;
-  border-bottom: 2px solid #D2D2D4;
-}
-
-.loads__status {
+.card {
   position: relative;
-  width: 20%;
-  min-width: 200px;
-  border-right: 2px solid #D2D2D4;
-  border-bottom: 2px solid #D2D2D4;
-}
-
-.loads__info {
-  padding: 10px;
-  border-left: 2px solid #D2D2D4;
-  border-right: 2px solid #D2D2D4;
-  border-bottom: 2px solid #D2D2D4;
-}
-
-.loads__text {
-  font-weight: 600;
-  margin-bottom: 5px;
-  span {
-    font-weight: 400;
+  overflow: hidden;
+  padding: 20px 30px 20px 20px;
+  width: calc(50% - 10px);
+  border: 2px solid #d2d2d4;
+  border-radius: 5px;
+  &--assigned {
+    background-color: #e8ede7;
+  }
+  &--assigned::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 20px solid #338309;
+    border-left: 20px solid #338309;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: 1;
+  }
+  &--shipped {
+    background-color: #d2d2d4;
+    opacity: 0.8;
+  }
+  &__del {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+  }
+  &__btn {
+    margin-top: 10px;
+    display: block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #338309;
+    color: #fff;
+    border: 2px solid #338309;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.1s linear;
+    &:hover {
+      background-color: #fff;
+      color: #338309;
+    }
+    &:disabled {
+      background-color: #747674;
+      border-color: #747674;
+      opacity: 0.5;
+      cursor: auto;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  &__name {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    span {
+      color: #036280;
+      font-style: italic;
+    }
+  }
+  &__link {
+    color: #747674;
+    font-size: 0.9rem;
+    font-style: italic;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__info {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 2px solid #d2d2d4;
   }
 }
 
 // ***** Driver Active Load *****
-.activeload {  
+.activeload {
   &__title {
     margin-bottom: 20px;
     font-size: 1.5rem;
@@ -547,12 +577,12 @@ fieldset {
   }
   &__block {
     padding-bottom: 10px;
-    border-bottom: 2px solid #D2D2D4;
+    border-bottom: 2px solid #d2d2d4;
   }
   &__btn {
     padding: 8px 15px;
     margin-bottom: 15px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     font-weight: 600;
     background-color: #338309;
@@ -560,10 +590,69 @@ fieldset {
     border: 2px solid #338309;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.1 linear;;
+    transition: all 0.1 linear;
     &:hover {
       background-color: #fff;
       color: #338309;
     }
+  }
+}
+
+// ************ Media ****************
+// ***********************************
+@media (max-width: 1199.98px) {
+  .aside {
+    display: none;
+  }
+  .table {
+    padding: 20px 0;
+    width: 100%;
+    border: none;
+  }
+}
+
+@media (max-width: 899.98px) {
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .auth {
+    flex-direction: column;
+    &__image {
+      width: 100%;
+    }
+  }
+  .header__title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 499.98px) {
+  .form {
+    max-width: 100%;
+  }
+  .header__title {
+    font-size: 1.5rem;
+  }
+  .card {
+    padding: 10px 30px 10px 10px;
+    &__name {
+      font-size: 0.9rem;
+    }
+    &--assigned::after {
+      border-width: 13px;
+    }
+  }
+  .modal__content {
+    padding: 15px;
+  }
+  .modal__name {
+    font-size: 1.2rem;
+  }
+  .modal__text {
+    margin-bottom: 5px;
+    font-size: 1rem;
   }
 }

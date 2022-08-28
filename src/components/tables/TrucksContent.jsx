@@ -83,23 +83,19 @@ const TrucksContent = () => {
       <button className="table__btn" onClick={toggleAddTruckForm}>
         Add Truck +
       </button>
-      <div className="truck truck--header">
-        <div className="truck__type">Type</div>
-        <div className="truck__payload">Payload, kg</div>
-        <div className="truck__status">Status</div>
-        <div className="truck__assigned">Assigned</div>
+      <div className="cards__block">
+        {!trucks.length && (
+          <p className="truck__info">Trucks not Found! Please, add new Truck!</p>
+        )}
+        {trucks.map((truck) => (
+          <Truck
+            key={truck.id}
+            truckData={truck}
+            onDeleteTruckHandler={deleteTruckHandler}
+            onAssignTruckHandler={assignTruckHandler}
+          />
+        ))}
       </div>
-      {!trucks.length && (
-        <p className="truck__info">Trucks not Found! Please, add new Truck!</p>
-      )}
-      {trucks.map((truck) => (
-        <Truck
-          key={truck.id}
-          truckData={truck}
-          onDeleteTruckHandler={deleteTruckHandler}
-          onAssignTruckHandler={assignTruckHandler}
-        />
-      ))}
     </div>
   );
 };

@@ -15,28 +15,28 @@ const ActiveLoad = ({ loadData, loadLogs, iterateLoadHandler }) => {
     <div className="activeload">
       <h2 className="activeload__title">Current Active Load</h2>
       <div className="activeload__block">
-        <p className="loads__text">
+        <p className="card__name">
           State: <span>{loadData.state}</span>
         </p>
         <button className="activeload__btn" onClick={iterateLoadHandler}>
           {getButtonName(loadData.state)}
         </button>
-        <p className="loads__text">
+        <p className="card__name">
           Things: <span>{loadData.name}</span>
         </p>
-        <p className="loads__text">
+        <p className="card__name">
           Status: <span>{loadData.status}</span>
         </p>
-        <p className="loads__text">
+        <p className="card__name">
           PickUp Address: <span>{loadData.pickupAddress}</span>
         </p>
-        <p className="loads__text">
+        <p className="card__name">
           Delivery Address: <span>{loadData.deliveryAddress}</span>
         </p>
-        <p className="loads__text">
+        <p className="card__name">
           Payload: <span>{loadData.payload} kg</span>
         </p>
-        <p className="loads__text">
+        <p className="card__name">
           Dimensions (width*length*height):{" "}
           <span>
             {loadData.width}*{loadData.length}*{loadData.height}
@@ -47,7 +47,7 @@ const ActiveLoad = ({ loadData, loadLogs, iterateLoadHandler }) => {
       {loadLogs.map((log, index) => {
         const date = log.time.slice(0, 16).split("T").join(" ");
         return (
-          <p key={`log-${index}`} className="loads__text">
+          <p key={`log-${index}`} className="card__name">
             {date} - <span>{log.message}</span>
           </p>
         );

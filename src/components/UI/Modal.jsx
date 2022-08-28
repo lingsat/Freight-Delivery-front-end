@@ -10,6 +10,7 @@ const Modal = () => {
       onClick={() => setModalActive(false)}
     >
       <div className="modal__content" onClick={(e) => e.stopPropagation()}>
+        {userData.photoUrl && <img className="aside__img" src={`http://localhost:8080/photos/${userData.photoUrl}`} alt="Me" />}
         <h3 className="modal__name">Email: {userData.email}</h3>
         <p className="modal__text">
           Role: <span>{userData.role}</span>

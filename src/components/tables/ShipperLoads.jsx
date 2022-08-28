@@ -89,7 +89,6 @@ const ShipperLoads = () => {
   };
 
   useEffect(() => {
-    console.log("effect loads");
     fetchLoads();
   }, [showAddLoadForm, fetchLoads]);
 
@@ -101,13 +100,7 @@ const ShipperLoads = () => {
       <button className="table__btn" onClick={toggleAddLoadForm}>
         Create Load +
       </button>
-      <div className="loads__block">
-        <div className="loads__header">
-          <div className="loads__char loads__things">Things</div>
-          <div className="loads__char loads__address">Pickup Address</div>
-          <div className="loads__char loads__address">Delivery Address</div>
-          <div className="loads__char loads__status">Status</div>
-        </div>
+      <div className="cards__block">
         {loads.length === 0 && (
           <p className="truck__info">Loads not Found! Please, add new Load!</p>
         )}

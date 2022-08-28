@@ -17,7 +17,7 @@ const ForgotPassForm = ({ onShowLoginForm }) => {
     );
     const data = await response.json();
     if (response.ok && response.status === 200) {
-      alert("New password send to your email! - Sending email not working!");
+      alert(data.message);
       onShowLoginForm();
     } else {
       alert(data.message);
