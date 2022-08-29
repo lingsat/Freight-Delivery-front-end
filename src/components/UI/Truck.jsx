@@ -28,6 +28,7 @@ const Truck = ({ truckData, onDeleteTruckHandler, onAssignTruckHandler }) => {
       </p>
       <button
         className="card__btn"
+        disabled={truckData.status === 'OL' ? true : false}
         onClick={() => onAssignTruckHandler(truckData.id)}
       >
         {truckData.isAssigned === 'No' ? 'Assign' : 'DisAssign'}
