@@ -139,7 +139,7 @@ const ShipperLoads = () => {
         {loads.length === 0 && (
           <p className="truck__info">Loads not Found! Please, add new Load!</p>
         )}
-        {filteredLoads.map((load) => (
+        {loads.length > 0 && filteredLoads.map((load) => (
           <Load
             key={load.id}
             loadData={load}
