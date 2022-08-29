@@ -1,6 +1,6 @@
 React UI to test NodeJS server for Freight Delivery web application<br />
 
-NodeJS server(gitLab project) - https://github.com/lingsat/Freight-Delivery-front-end
+NodeJS server(gitLab project) - https://gitlab.com/Lingsat/node-hw3
 
 To start testing you need to download server repository and in terminal:
 - npm install - to install all node_modules;
