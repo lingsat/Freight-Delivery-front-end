@@ -19,7 +19,7 @@ const App = () => {
     photoUrl: "",
   });
   const [isLoggedIn, setIsLoggedIn] = useState(localLoginState || false);
-  const [token, setToken] = useState(localToken || "");
+  const [token, setToken] = useState(localToken || "");  
 
   useEffect(() => {
     localStorage.setItem("isLoggedIn", JSON.stringify(isLoggedIn));
